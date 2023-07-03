@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ArrayTest002
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //1~10까지 배열에 홀수만 입력되는 5키기의 aar배열을 만들어라
+            int[]arr=new int[5];
+            int cnt = 1;    //flag 또는 count변수를 사용 가능 한가?
+            for(int i =0; i<arr.Length; i++)
+            {
+                  arr[i] = cnt;
+                  cnt += 2;              
+            }
+            //화면에 출력
+            for(int i = 0; i<arr.Length; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+        }
+    }
+}
