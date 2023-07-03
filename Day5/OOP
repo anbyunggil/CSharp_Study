@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOPApp001
+{
+    class Cat
+    {
+        //필드, 멤버변수
+        public string Name;
+        private string Color;
+    }
+    class Program 
+    {
+        static void Main(string[] args)
+        {
+            Cat tom = new Cat();    //객체생성
+            tom.Name = "톰";     //private로 하면 name이 안나옴, public으로 바꿔주기.
+            Console.WriteLine(tom.Name);
+        }
+    }
+}
