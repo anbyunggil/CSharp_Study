@@ -1,4 +1,14 @@
-using System;
+8using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+    
+namespace Quiz019   //문자열 뒤집기
+{
+    internal class Program
+    {
+        using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,12 +19,47 @@ namespace Quiz019   //문자열 뒤집기
     internal class Program
     {
         static void Main(string[] args)
-        {
-           string s = Console.ReadLine();
-            for(int i=s.Length-1; i>=0; i--)
+        //방법1
+        /*{
+           string input = Console.ReadLine();
+
+            string reversed = "";
+            for(int i = input.Length - 1; i >= 0; i--)
             {
-                Console.Write(s[i]);
+                reversed += input[i];
             }
+            Console.WriteLine(reversed);
+        }*/
+
+        //방법2
+        /*{
+            string input = Console.ReadLine();
+
+            char[] array = input.ToCharArray();
+            Array.Reverse(array);
+            string reversed = new string(array);
+
+            Console.WriteLine(reversed);
+        }*/
+    
+        //방법3
+        /*{
+            //System Stack 사용
+            string input = Console.ReadLine();
+
+            Stack<char> stack = new Stack<char>(input);
+            string reversed = string.Join("", stack);
+
+            Console.WriteLine(reversed);
         }
+
+        //방법4
+        /*{
+            string input = Console.ReadLine();
+
+            string reversed = new string(input.Reverse().ToArray());
+
+            Console.WriteLine(reversed);
+        }*/
     }
 }
