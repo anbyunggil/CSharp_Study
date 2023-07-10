@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace InterfaceExam01
+{
+    //유티콘 -> 말, 천사의 날개
+    interface IWing
+    {
+        void fly();
+    }
+    class Angel
+    {
+
+    }
+    class Horse
+    {
+
+    }
+    class Unicon : Horse, IWing
+    {
+        public void fly()
+        {
+            //내가 자유롭게 코딩합니다.
+            Console.WriteLine("Fly~!");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Unicon unicon = new Unicon();
+                unicon.fly();
+        }
+    }
+}
