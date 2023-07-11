@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HelloWorld  //1부터 100까지 찍기 심화
+{
+    internal class Program
+    {
+        static int SumLoop(int a, int b)
+        {
+            int sum = 0;
+            for (int i = a; i <= b; i++)
+            {
+                sum += i;
+            }
+            return sum;
+
+        }
+        static void Main(string[] args)
+        {
+            int result = SumLoop(1, 100);
+            Console.WriteLine(result);
+        }
+    }
+}
