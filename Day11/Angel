@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Angel_Open_
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            int result1 = 180 * (a - 2);    //내각의합 구하는 공식
+            int result2 = 360;              //외각은 360고정
+            Console.WriteLine(result1);
+            Console.WriteLine(result2);
+        }
+    }
+}
