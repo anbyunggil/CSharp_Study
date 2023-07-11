@@ -11,17 +11,16 @@ namespace ConsoleApp4
     {
         static void Main(string[] args)
         {
-            int a = int.Parse(Console.ReadLine());
-            int b = int.Parse(Console.ReadLine());
-            int c;
+            int a, b, c;
 
-            
-            Console.WriteLine($"{a} {b}");
+            a = int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
+
             c = a;
             a = b;
             b = c;
-            Console.WriteLine($"{a} {b}");
 
+            Console.WriteLine($"{a} {b}");
         }
     }
 }
