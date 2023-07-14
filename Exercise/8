@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp10
+{
+    public class Example
+
+    {
+
+        public static void Main()
+
+        {
+            String s;
+
+            Console.Clear();
+            s = Console.ReadLine();
+            string result = "";
+
+            for(int i = 0; i < s.Length; i++)
+            {
+                if (s[i]>='a' && s[i] <= 'z')
+                {
+                    result += s.ToUpper()[i];
+                }
+                if (s[i] >= 'A' && s[i] <= 'Z')
+                {
+                    result += s.ToLower()[i];
+                }
+            }
+            Console.WriteLine(result);
+        }
+    }
+}
