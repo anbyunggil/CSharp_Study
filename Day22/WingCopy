@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WingCopyApp
+{
+    public partial class CopyMainForm : Form
+    {
+        private string sourceFile;
+        private string destFile;
+        public CopyMainForm()
+        {
+            InitializeComponent();
+        }
+
+        private void btnSrcFile_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    sourceFile = openFileDialog.FileName;
+                    lblSrcPath.Text = sourceFile;
+                }
+            }
+        }
+    }
+}
