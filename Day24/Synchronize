@@ -23,17 +23,37 @@ namespace Synchronize
             thisLock = new object();
             count = 0;
         }
-        public void Increase()
+//둘다 사용 가능
+/*
+        //public void Increase()
+        //{
+        //    int loopCount = LOOP_COUNT;
+        //    while (loopCount -- > 0)
+        //    {
+        //        lock (thisLock)
+        //        {
+        //            count++;
+        //        }
+        //        Thread.Sleep(1);
+        //    }
+        //}
+        public void Increse()
         {
-            int loopCount = LOOP_COUNT;
-            while (loopCount -- > 0)
+            int loopCount = 1000;
+            while(loopCount -- > 0)
             {
-                lock (thisLock)
+                Monitor.Enter(thisLock);
+                try
                 {
                     count++;
                 }
-                Thread.Sleep(1);
+                finally
+                {
+                    Monitor.Exit(thisLock);
+                }
             }
+*/
+            
         }
         public void Decrease()
         {
@@ -55,7 +75,7 @@ namespace Synchronize
             Counter counter = new Counter();
 
             Thread incThread = new Thread(
-                new ThreadStart(counter.Increase));
+                new ThreadStart(counter.Increse));
             Thread decThread = new Thread(
                 new ThreadStart(counter.Decrease));
 
